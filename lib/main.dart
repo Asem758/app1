@@ -12,7 +12,13 @@ class myApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return const MaterialApp(home: HomeActivity());
+    return  MaterialApp(
+        theme: ThemeData(primarySwatch: Colors.green),
+        darkTheme: ThemeData(primarySwatch: Colors.blue),
+        color: Colors.blue,
+        debugShowCheckedModeBanner: false,
+        home: HomeActivity()
+    );
   }
   
 }
@@ -26,8 +32,22 @@ class HomeActivity extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(title: Text("MuyApp"),),
+      appBar: AppBar(
+        title: Text("Inventory App"),
+        titleSpacing: 0,
+        centerTitle: true,
+        toolbarHeight: 60,
+        toolbarOpacity: 1,
+        elevation: 0,
+        backgroundColor: Colors.blue,
+
+      ),
       body: Text("Hello"),
+      /*drawer: (),
+      endDrawer: (),
+      bottomNavigationBar: (),
+      floatingActionButton: (),
+       */
 
     );
   }
